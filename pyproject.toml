@@ -8,11 +8,15 @@ authors = [
 ]
 requires-python = ">=3.14"
 dependencies = [
+    "ipywidgets>=8.1.9",
     "jupyter>=1.1.1",
     "minsearch>=0.2.0",
     "openai>=3.35.1",
     "python-dotenv>=1.2.4",
     "requests>=2.34.2",
+    "sentence-transformers>=6.2.0",
+    "torch>=2.15.0",
+    "tqdm>=4.70.1",
 ]
 
 [project.scripts]
@@ -21,3 +25,11 @@ llm-rag-project = "llm_rag_project:main"
 [build-system]
 requires = ["uv_build>=0.13.4,<0.14.0"]
 build-backend = "uv_build"
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch-cpu" }
