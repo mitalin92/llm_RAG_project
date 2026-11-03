@@ -1,2 +1,9 @@
+.ipynb_checkpoints/
+__pycache__/
 .venv
+.envrc
+.tmp
 .env
+*.db
+*.db-shm
+*.db-wal
